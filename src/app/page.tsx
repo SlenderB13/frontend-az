@@ -92,9 +92,9 @@ export default function Home() {
         <Link href="/">A|Z</Link>
       </nav>
       <main className="flex flex-col items-center justify-between p-4">
-        <div className="flex flex-col gap-3 p-4">
-          <div className="flex flex-col xl:flex-row justify-between text-center">
-            <h1 className="text-3xl font-bold">Nossas camisetas</h1>
+        <div className="flex flex-col gap-3 p-4 xl:w-1/2">
+          <div className="flex flex-col xl:flex-row justify-between text-center xl:w-full">
+            <h1 className="text-3xl font-bold">Camisetas</h1>
             <div className="flex flex-col xl:flex-row gap-2 content-end mt-8 xl:mt-0">
               {/* potencial para virar componente, mas por tamanho do projeto é melhor evitar otimizacão prematura */}
               <Input type="text" placeholder="Pesquisar por nome" className="w-full xl:w-1/2" onChange={(e) => {
@@ -152,7 +152,7 @@ export default function Home() {
               <Button variant="secondary" onClick={() => handleClearFilter()}>Limpar</Button>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row flex-wrap xl:flex-nowrap gap-4 w-1/2 mt-8 xl:mx-0">
+          <div className="flex flex-col xl:flex-row flex-wrap gap-4 mt-8 xl:mx-0">
             {
               filteredShirts?.map(({ id, name, price, sizes, colors }) => (
                 <Card className="min-w-64">
